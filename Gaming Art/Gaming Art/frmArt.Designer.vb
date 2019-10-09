@@ -55,6 +55,8 @@ Partial Class frmArt
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ArtistBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ArtistBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.btnValue = New System.Windows.Forms.Button()
+        Me.lblTotalRetailvalue = New System.Windows.Forms.Label()
         Art_IDLabel = New System.Windows.Forms.Label()
         Artist_NameLabel = New System.Windows.Forms.Label()
         Art_TitleLabel = New System.Windows.Forms.Label()
@@ -335,12 +337,36 @@ Partial Class frmArt
         Me.ArtistBindingNavigator.TabIndex = 2
         Me.ArtistBindingNavigator.Text = "BindingNavigator1"
         '
+        'btnValue
+        '
+        Me.btnValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnValue.ForeColor = System.Drawing.Color.Green
+        Me.btnValue.Location = New System.Drawing.Point(274, 329)
+        Me.btnValue.Name = "btnValue"
+        Me.btnValue.Size = New System.Drawing.Size(154, 32)
+        Me.btnValue.TabIndex = 15
+        Me.btnValue.Text = "Total Retail Value"
+        Me.btnValue.UseVisualStyleBackColor = True
+        '
+        'lblTotalRetailvalue
+        '
+        Me.lblTotalRetailvalue.AutoSize = True
+        Me.lblTotalRetailvalue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalRetailvalue.Location = New System.Drawing.Point(225, 373)
+        Me.lblTotalRetailvalue.Name = "lblTotalRetailvalue"
+        Me.lblTotalRetailvalue.Size = New System.Drawing.Size(262, 20)
+        Me.lblTotalRetailvalue.TabIndex = 16
+        Me.lblTotalRetailvalue.Text = "XXXXXXXXXXXXXXXXXXXXXXX"
+        Me.lblTotalRetailvalue.Visible = False
+        '
         'frmArt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(662, 411)
+        Me.Controls.Add(Me.lblTotalRetailvalue)
+        Me.Controls.Add(Me.btnValue)
         Me.Controls.Add(Retail_PriceLabel)
         Me.Controls.Add(Me.Retail_PriceTextBox)
         Me.Controls.Add(CollectionLabel)
@@ -394,4 +420,6 @@ Partial Class frmArt
     Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
     Friend WithEvents ArtistBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents ArtistBindingNavigator As BindingNavigator
+    Friend WithEvents btnValue As Button
+    Friend WithEvents lblTotalRetailvalue As Label
 End Class
